@@ -1,0 +1,16 @@
+<div class="add-customer-form" style="text-align:right; margin-bottom:-60px">
+    <!-- <h2 i18n>Search User</h2> -->
+    <form class="example-form" [formGroup]="searchForm" (ngSubmit)="submit()">
+        <mat-form-field class="example-full-width" appearance="fill" style="margin-right: 20px;"> 
+          <mat-label i18n>Search</mat-label>
+          <input type="text" matInput placeholder="Enter username" formControlName="login">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" i18n [disabled]="searchForm.value.login ? false: true">Submit</button>
+
+      </form>
+
+</div>
+
+<div *ngIf="usersList">
+    <app-results [usersList]="usersList"></app-results>
+</div>

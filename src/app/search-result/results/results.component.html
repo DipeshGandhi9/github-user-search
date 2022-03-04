@@ -1,0 +1,44 @@
+<div class="result-container">
+    <h2 i18n>Users List</h2>
+
+    <div class="mat-elevation-z8">
+        <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;"
+          (matSortChange)="sortData($event)"
+        >
+
+          <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+          
+          <!-- avatar_url Column -->
+          <ng-container matColumnDef="avatar_url">
+            <th mat-header-cell *matHeaderCellDef i18n> Avatar </th>
+            <td mat-cell *matCellDef="let element"> <img class="profile-picture" [src]="element.avatar_url"> </td>
+          </ng-container>
+          
+          <!-- login Column -->
+          <ng-container matColumnDef="login">
+            <th mat-header-cell *matHeaderCellDef i18n mat-sort-header> Login </th>
+            <td mat-cell *matCellDef="let element"> {{element.login}} </td>
+          </ng-container>
+        
+          <!-- type Column -->
+          <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef i18n> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          
+        </table>
+        
+        <div mat-row class="no-record-text" *ngIf="dataSource?.data?.length == 0"> No records found!</div>
+
+        <mat-paginator
+          [pageSize]="9"
+          [pageSizeOptions]="[9, 18, 27]"
+          showFirstLastButtons>
+        </mat-paginator>
+    
+    </div>
+</div>
