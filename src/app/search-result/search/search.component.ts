@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
-import { Users } from 'src/app/shared/models/users.model';
-import { SearchResultService } from 'src/app/shared/Services/search-result.service';
+import { Users } from '../../shared/models/users.model';
+import { SearchResultService } from '../../shared/services/search-result.service';
 
 @Component({
   selector: 'app-search',

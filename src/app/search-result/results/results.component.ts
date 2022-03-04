@@ -2,8 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Sort } from '@angular/material/sort';
-
-import { Users } from 'src/app/shared/models/users.model';
+import { Users } from '../../shared/models/users.model';
 
 @Component({
   selector: 'app-results',
