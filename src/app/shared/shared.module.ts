@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { SearchResultService } from './services/search-result.service';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,9 @@ import { MatSortModule } from '@angular/material/sort';
   ],
   exports:[
     HeaderComponent,RouterModule,MatInputModule,FormsModule,ReactiveFormsModule,MatTableModule,MatPaginatorModule,MatButtonModule, MatSortModule
+  ],
+  providers:[
+    SearchResultService
   ]
 })
 export class SharedModule { }

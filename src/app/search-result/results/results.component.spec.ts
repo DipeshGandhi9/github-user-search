@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { ResultsComponent } from './results.component';
 
@@ -9,10 +8,7 @@ describe('ResultsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResultsComponent ],
-      schemas: [
-        NO_ERRORS_SCHEMA
-      ]
+      declarations: [ ResultsComponent ]
     })
     .compileComponents();
   });
