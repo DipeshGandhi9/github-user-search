@@ -10,7 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { SearchResultService } from './services/search-result.service';
+
+import { SearchResultService } from '@shared/services/search-result.service';
 
 @NgModule({
   declarations: [

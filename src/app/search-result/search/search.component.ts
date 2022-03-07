@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
-import { Users } from '../../shared/models/users.model';
-import { SearchResultService } from '../../shared/services/search-result.service';
+import { Users } from '@shared/models/users.model';
+import { SearchResultService } from '@shared/services/search-result.service';
 
 @Component({
   selector: 'app-search',
@@ -45,7 +45,7 @@ export class SearchComponent implements OnInit {
       this.usersList = res['items'] || [];
       this.usersList.sort((a, b) => (a.login < b.login ? -1 : 1));
       this.spinner.hide();
-    }, err => {
+    }, (err: any) => {
       this.spinner.hide();
       if(err.error) {
         this.toaster.error(err.error.message);
